@@ -45,7 +45,7 @@ export default function ThroughputCapacityStrip(props) {
                 fontFamily: `${bodyFont}, Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif`,
             }}
         >
-            <div style={{ maxWidth, margin: "0 auto", padding: "0 24px" }}>
+            <div className="tcs-wrap" style={{ maxWidth, margin: "0 auto" }}>
                 <div
                     className="tcs-shell"
                     style={{
@@ -60,22 +60,20 @@ export default function ThroughputCapacityStrip(props) {
                         style={{
                             display: "inline-flex",
                             alignItems: "center",
-                            gap: 8,
                             borderRadius: 999,
-                            padding: "7px 14px",
-                            border: "1px solid rgba(255,255,255,0.14)",
-                            background: "rgba(5,7,8,0.98)",
-                            color: "rgba(255,255,255,0.9)",
+                            padding: "6px 14px",
+                            border: "1px solid rgba(0,255,200,0.22)",
+                            background: "linear-gradient(90deg, rgba(0,165,255,0.12) 0%, rgba(0,255,200,0.12) 100%)",
+                            color: "#18E0FF",
                             fontSize: 11,
-                            fontWeight: 800,
-                            letterSpacing: "0.12em",
+                            fontWeight: 600,
+                            letterSpacing: "0.08em",
                             textTransform: "uppercase",
                             fontFamily: `${uiFont}, Inter, system-ui, sans-serif`,
+                            boxShadow: "0 0 0 1px rgba(0,255,200,0.06), inset 0 0 18px rgba(0,255,200,0.1)",
                         }}
                     >
-                        <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#FFB800", boxShadow: "0 0 10px rgba(255,184,0,0.45)" }} />
                         {pill}
-                        <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#FFB800", boxShadow: "0 0 10px rgba(255,184,0,0.45)" }} />
                     </div>
 
                     <div
@@ -103,6 +101,19 @@ export default function ThroughputCapacityStrip(props) {
                     }
                     .tcs-shell {
                         padding: 22px 20px !important;
+                    }
+                }
+                .tcs-wrap {
+                    padding: 0 16px;
+                }
+                @media (min-width: 768px) {
+                    .tcs-wrap {
+                        padding: 0 20px;
+                    }
+                }
+                @media (min-width: 1024px) {
+                    .tcs-wrap {
+                        padding: 0 24px;
                     }
                 }
             `}</style>

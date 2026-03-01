@@ -65,9 +65,11 @@ export default function OldWayVsNewWaySection(props) {
                     style={{
                         margin: "20px 0 12px 0",
                         fontSize: "clamp(40px, 6vw, 56px)",
-                        lineHeight: 1.08,
+                        lineHeight: 1.14,
                         letterSpacing: "-0.02em",
                         fontWeight: 360,
+                        display: "block",
+                        paddingBottom: "0.06em",
                         fontFamily: `${headingFont}, "Clash Grotesk", "Helvetica Neue", Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif`,
                         background:
                             "linear-gradient(180deg, rgba(242,242,242,0.96) 0%, rgba(212,212,212,0.9) 58%, rgba(138,138,138,0.78) 100%)",
@@ -241,20 +243,19 @@ function EyebrowPill({ label, accent, border, uiFont }) {
             style={{
                 display: "inline-flex",
                 alignItems: "center",
-                gap: 8,
-                padding: "6px 12px",
+                padding: "6px 14px",
                 borderRadius: 999,
-                border: `1px solid ${border}`,
-                background: "rgba(0,255,200,0.06)",
-                color: accent,
+                border: "1px solid rgba(0,255,200,0.22)",
+                background: "linear-gradient(90deg, rgba(0,165,255,0.12) 0%, rgba(0,255,200,0.12) 100%)",
+                color: "#18E0FF",
                 fontSize: 11,
-                fontWeight: 800,
-                letterSpacing: "0.12em",
+                fontWeight: 600,
+                letterSpacing: "0.08em",
                 textTransform: "uppercase",
                 fontFamily: `${uiFont}, Inter, system-ui, sans-serif`,
+                boxShadow: "0 0 0 1px rgba(0,255,200,0.06), inset 0 0 18px rgba(0,255,200,0.1)",
             }}
         >
-            <span style={{ width: 6, height: 6, borderRadius: "50%", background: accent }} />
             {label}
         </div>
     )

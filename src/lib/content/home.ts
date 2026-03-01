@@ -2,13 +2,13 @@ import { themeTokens } from "@/lib/theme/tokens";
 
 export const homeContent = {
   hero: {
-    badge: "INFRASTRUCTURE • NOT A SERVICE",
+    badge: "INFRASTRUCTURE - NOT A SERVICE",
     title: "We route high-intent introductions.",
     subtitle: "Private introductions when timing and fit already align.",
     cta: "Access the Routing Layer",
   },
   infrastructureBadge: {
-    text: "Infrastructure • Not a Service",
+    text: "Infrastructure - Not a Service",
     uiFont: "Inter",
     bg: "transparent",
     border: "rgba(255,184,0,0.35)",
@@ -41,8 +41,68 @@ export const homeContent = {
     accent2: "#16C3FF",
     accent3: "#5EA8FF",
     maxWidth: 1120,
-    paddingY: 20,
+    paddingY: 8,
     radius: 14,
+  },
+  connectIdealClients: {
+    eyebrow: "THE ROUTING LAYER",
+    heading: "Connect with Your Ideal Clients",
+    subheading:
+      "B2B executives and business owners partner with myoProcess to get connected directly with their ideal client profile through our intelligent routing infrastructure.",
+    items: [
+      {
+        index: "01",
+        title: "Signal Layer",
+        description: "Incoming buyer signals, intent data, and qualification triggers.",
+      },
+      {
+        index: "02",
+        title: "Routing Layer",
+        description: "Real-time matching, qualification filtering, and pathway control.",
+      },
+      {
+        index: "03",
+        title: "Connection Layer",
+        description: "Executed routes, completed handoffs, and transaction flow.",
+      },
+    ],
+    footnote:
+      "Your ideal clients, delivered. Every qualified signal, every matched connection, every introduction routed directly to you through myoProcess.",
+  },
+  systemLevelProcessing: {
+    eyebrow: "THE PROTOCOL",
+    heading: "System-Level Processing",
+    subheading: "Not steps. Not tasks. A continuous flow of signal processing at infrastructure scale.",
+    cards: [
+      {
+        stage: "DETECT",
+        title: "Signal Detection",
+        description: "Inbound buyer signals enter the system",
+        metrics: ["Signal Volume", "Intent Strength", "Source Quality"],
+        tone: "teal",
+      },
+      {
+        stage: "QUALIFY",
+        title: "Route Qualification",
+        description: "Real-time filtering and pathway validation",
+        metrics: ["Match Score", "Qualification Rate", "Filter Efficiency"],
+        tone: "blue",
+      },
+      {
+        stage: "ROUTE",
+        title: "Pathway Execution",
+        description: "Controlled connection to optimal destination",
+        metrics: ["Routing Speed", "Path Accuracy", "Throughput"],
+        tone: "green",
+      },
+      {
+        stage: "COMPLETE",
+        title: "Transaction Flow",
+        description: "Successful handoff and outcome tracking",
+        metrics: ["Completion Rate", "Transaction Value", "Network Effect"],
+        tone: "green",
+      },
+    ],
   },
   twoSidedNetwork: {
     eyebrow: "NETWORK ARCHITECTURE",
@@ -130,8 +190,9 @@ export const homeContent = {
     role: "Redwood Tech",
   },
   footer: {
-    title: "Ready to route better introductions?",
-    cta: "Book Intro Call",
+    brand: "Westmark Office",
+    tagline: "Connecting B2B executives with their ideal clients",
+    copyright: "©2026 Westmark Office. All rights reserved",
   },
   theme: themeTokens,
 };

@@ -1,31 +1,33 @@
 import AccessRoutingLayerSection from "@/components/sections/AccessRoutingLayerSection";
-import { FooterCtaSection } from "@/components/sections/FooterCtaSection";
+import { ConnectIdealClientsSection } from "@/components/sections/ConnectIdealClientsSection";
 import { HeroSection } from "@/components/sections/HeroSection";
-import InfrastructureBadgeStrip from "@/components/sections/InfrastructureBadgeStrip";
+import { LandingOverlapFooter } from "@/components/sections/LandingOverlapFooter";
 import OldWayVsNewWaySection from "@/components/sections/OldWayVsNewWaySection";
-import { TestimonialSection } from "@/components/sections/TestimonialSection";
+import { SystemLevelProcessingSection } from "@/components/sections/SystemLevelProcessingSection";
 import ThroughputCapacityStrip from "@/components/sections/ThroughputCapacityStrip";
 import TwoSidedRoutingNetwork from "@/components/sections/TwoSidedRoutingNetwork";
 import { homeContent } from "@/lib/content/home";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-black">
-      <HeroSection {...homeContent.hero} />
-      <InfrastructureBadgeStrip {...homeContent.infrastructureBadge} />
-      <ThroughputCapacityStrip {...homeContent.throughputStrip} />
-      <TwoSidedRoutingNetwork {...homeContent.twoSidedNetwork} />
-      <OldWayVsNewWaySection {...homeContent.oldVsNew} />
-      <AccessRoutingLayerSection {...homeContent.accessRouting} />
-      <TestimonialSection
-        eyebrow={homeContent.testimonial.eyebrow}
-        title={homeContent.testimonial.title}
-        subtitle={homeContent.testimonial.subtitle}
-        quote={homeContent.testimonial.quote}
-        author={homeContent.testimonial.author}
-        role={homeContent.testimonial.role}
+    <>
+      <main className="relative z-10 min-h-screen">
+        <div className="bg-black">
+          <HeroSection {...homeContent.hero} />
+          <ConnectIdealClientsSection {...homeContent.connectIdealClients} />
+          <SystemLevelProcessingSection {...homeContent.systemLevelProcessing} />
+          <ThroughputCapacityStrip {...homeContent.throughputStrip} />
+          <TwoSidedRoutingNetwork {...homeContent.twoSidedNetwork} />
+          <OldWayVsNewWaySection {...homeContent.oldVsNew} />
+          <AccessRoutingLayerSection {...homeContent.accessRouting} />
+        </div>
+        <div className="h-[52vh] min-h-[320px]" aria-hidden />
+      </main>
+      <LandingOverlapFooter
+        brand={homeContent.footer.brand}
+        tagline={homeContent.footer.tagline}
+        copyright={homeContent.footer.copyright}
       />
-      <FooterCtaSection title={homeContent.footer.title} cta={homeContent.footer.cta} />
-    </main>
+    </>
   );
 }

@@ -177,9 +177,11 @@ export default function TwoSidedRoutingNetwork(props) {
                     style={{
                         margin: "18px 0 10px 0",
                         fontSize: isMobile ? 34 : isTablet ? 44 : containerWidth <= 1200 ? 50 : 56,
-                        lineHeight: 1.08,
+                        lineHeight: 1.14,
                         letterSpacing: "-0.02em",
                         fontWeight: 380,
+                        display: "block",
+                        paddingBottom: "0.06em",
                         fontFamily: `${headingFont}, "Clash Grotesk", "Helvetica Neue", Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif`,
                         color: "rgba(224,224,224,0.95)",
                         background:
@@ -470,28 +472,19 @@ function EyebrowPill({ label, accent, border, uiFont }) {
             style={{
                 display: "inline-flex",
                 alignItems: "center",
-                padding: "6px 12px",
+                padding: "6px 14px",
                 borderRadius: 999,
-                border: `1px solid ${border}`,
-                background: "rgba(0,255,200,0.06)",
-                color: "rgba(255,255,255,0.70)",
+                border: "1px solid rgba(0,255,200,0.22)",
+                background: "linear-gradient(90deg, rgba(0,165,255,0.12) 0%, rgba(0,255,200,0.12) 100%)",
+                color: "#18E0FF",
                 fontSize: 11,
-                letterSpacing: "0.14em",
+                letterSpacing: "0.08em",
                 textTransform: "uppercase",
-                fontWeight: 700,
-                gap: 8,
+                fontWeight: 600,
                 fontFamily: `${uiFont}, Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif`,
+                boxShadow: "0 0 0 1px rgba(0,255,200,0.06), inset 0 0 18px rgba(0,255,200,0.1)",
             }}
         >
-            <span
-                style={{
-                    width: 6,
-                    height: 6,
-                    borderRadius: "50%",
-                    background: accent,
-                    boxShadow: `0 0 10px rgba(0,255,200,0.35)`,
-                }}
-            />
             {label}
         </div>
     )

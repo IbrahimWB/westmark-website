@@ -15,6 +15,12 @@ export const themeTokens = {
     panelStrong: "rgba(10,14,16,0.72)",
     border: "rgba(0,255,200,0.18)",
     borderStrong: "rgba(0,255,200,0.22)",
+    heroGlowA: "rgba(0,130,255,0.16)",
+    heroGlowB: "rgba(0,255,200,0.12)",
+    heroGlowC: "rgba(255,184,0,0.08)",
+    heroDotBase: "#95D9FF",
+    heroDotAccent: "#00FFC8",
+    heroDotWarm: "#FFB800",
   },
   layout: {
     maxWidth: 1120,

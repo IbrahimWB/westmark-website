@@ -24,24 +24,24 @@ export default function InfrastructureBadgeStrip(props) {
                     style={{
                         borderRadius: radius,
                         border: `1px solid ${border}`,
-                        background: "rgba(5,7,8,0.98)",
-                        minHeight: 34,
+                        background: "linear-gradient(90deg, rgba(5,7,8,0.98) 0%, rgba(7,12,14,0.98) 100%)",
+                        minHeight: 36,
                         display: "grid",
                         placeItems: "center",
                         boxShadow: "0 10px 40px rgba(0,0,0,0.45)",
-                        padding: "0 12px",
+                        padding: "0 14px",
                     }}
                 >
                     <div
                         style={{
                             display: "inline-flex",
                             alignItems: "center",
-                            gap: 9,
+                            gap: 8,
                             color: textColor,
-                            fontSize: 16,
-                            fontWeight: 420,
+                            fontSize: 13,
+                            fontWeight: 500,
                             lineHeight: 1.1,
-                            letterSpacing: "-0.005em",
+                            letterSpacing: "0",
                             fontFamily: `Inter, ${uiFont}, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif`,
                         }}
                     >
