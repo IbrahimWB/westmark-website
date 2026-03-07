@@ -64,7 +64,7 @@ export default function OldWayVsNewWaySection(props) {
                 <h2
                     style={{
                         margin: "20px 0 12px 0",
-                        fontSize: "clamp(40px, 6vw, 56px)",
+                        fontSize: "clamp(34px, 8vw, 56px)",
                         lineHeight: 1.14,
                         letterSpacing: "-0.02em",
                         fontWeight: 360,
@@ -81,14 +81,14 @@ export default function OldWayVsNewWaySection(props) {
                     {heading}
                 </h2>
 
-                <p style={{ margin: 0, color: muted, fontSize: 14, lineHeight: 1.7, maxWidth: 760, marginInline: "auto" }}>{subheading}</p>
+                <p style={{ margin: 0, color: muted, fontSize: 14, lineHeight: 1.6, maxWidth: 760, marginInline: "auto" }}>{subheading}</p>
             </div>
 
             <div
                 className="ovn-grid"
                 style={{
                     maxWidth,
-                    margin: "52px auto 0 auto",
+                margin: "44px auto 0 auto",
                     padding: "0 24px",
                     display: "grid",
                     gridTemplateColumns: "1fr 1fr",

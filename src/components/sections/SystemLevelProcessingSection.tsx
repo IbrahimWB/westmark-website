@@ -63,15 +63,15 @@ function toneStyles(tone: string) {
 
 export function SystemLevelProcessingSection({ eyebrow, heading, subheading, cards }: Props) {
   return (
-    <section className="px-4 pt-16 pb-6 md:px-5 md:pt-20 md:pb-8 lg:px-6">
+    <section className="px-4 pt-12 pb-4 md:px-5 md:pt-20 md:pb-8 lg:px-6">
       <div className="mx-auto max-w-[1120px]">
         <div className="text-center">
           <EyebrowPill label={eyebrow} />
-          <h2 className="mt-4 text-[clamp(40px,5vw,60px)] font-[380] leading-[1.08] tracking-[-0.02em] gradient-heading">{heading}</h2>
-          <p className="mx-auto mt-4 max-w-[700px] text-sm leading-7 text-white/56 md:text-base">{subheading}</p>
+          <h2 className="mt-4 text-[clamp(34px,8vw,60px)] font-[380] leading-[1.1] tracking-[-0.02em] gradient-heading">{heading}</h2>
+          <p className="mx-auto mt-4 max-w-[700px] text-sm leading-6 text-white/56 md:text-base md:leading-7">{subheading}</p>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2">
+        <div className="mt-10 grid grid-cols-1 gap-4 md:mt-12 md:gap-6 md:grid-cols-2">
           {cards.map((card, idx) => {
             const tone = toneStyles(card.tone);
             const icon =
@@ -80,12 +80,12 @@ export function SystemLevelProcessingSection({ eyebrow, heading, subheading, car
             return (
               <article
                 key={`${card.stage}-${card.title}`}
-                className="rounded-2xl border px-5 py-5 shadow-[0_18px_44px_rgba(0,0,0,0.3)] md:px-6"
+                className="rounded-2xl border px-4 py-4 shadow-[0_18px_44px_rgba(0,0,0,0.3)] sm:px-5 sm:py-5 md:px-6"
                 style={{ borderColor: tone.border, background: tone.bg }}
               >
                 <div className="flex items-start gap-4">
                   <span
-                    className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border"
+                    className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border sm:h-10 sm:w-10"
                     style={{ borderColor: tone.iconBorder, background: tone.iconBg, color: tone.accent }}
                   >
                     {icon}
@@ -94,8 +94,8 @@ export function SystemLevelProcessingSection({ eyebrow, heading, subheading, car
                     <p className="text-[11px] font-semibold uppercase tracking-[0.12em]" style={{ color: tone.accent }}>
                       {card.stage}
                     </p>
-                    <h3 className="mt-1 text-[30px] font-semibold text-white/92">{card.title}</h3>
-                    <p className="mt-1.5 text-[13px] text-white/58">{card.description}</p>
+                    <h3 className="mt-1 text-[24px] font-semibold leading-[1.1] text-white/92 sm:text-[28px] md:text-[30px]">{card.title}</h3>
+                    <p className="mt-1.5 text-[12px] text-white/58 md:text-[13px]">{card.description}</p>
                   </div>
                 </div>
 

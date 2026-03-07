@@ -44,10 +44,11 @@ export default function AccessRoutingLayerSection(props) {
                 fontFamily: `${bodyFont}, Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif`,
             }}
         >
-            <div style={{ maxWidth, margin: "0 auto", padding: "0 24px", textAlign: "center" }}>
+            <div style={{ maxWidth, margin: "0 auto", padding: "0 16px", textAlign: "center" }} className="arl-head-wrap">
                 <EyebrowPill label={eyebrow} uiFont={uiFont} />
 
                 <h2
+                    className="arl-title"
                     style={{
                         margin: "22px 0 12px 0",
                         fontSize: "clamp(42px, 5.2vw, 66px)",
@@ -68,6 +69,7 @@ export default function AccessRoutingLayerSection(props) {
                 </h2>
 
                 <p
+                    className="arl-subtitle"
                     style={{
                         margin: 0,
                         maxWidth: 700,
@@ -86,7 +88,7 @@ export default function AccessRoutingLayerSection(props) {
                 style={{
                     maxWidth,
                     margin: "42px auto 0 auto",
-                    padding: "0 24px",
+                    padding: "0 16px",
                     display: "grid",
                     gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
                     gap: 16,
@@ -126,8 +128,9 @@ export default function AccessRoutingLayerSection(props) {
                 />
             </div>
 
-            <div style={{ maxWidth, margin: "16px auto 0 auto", padding: "0 24px" }}>
+            <div style={{ maxWidth, margin: "16px auto 0 auto", padding: "0 16px" }}>
                 <div
+                    className="arl-info-panel"
                     style={{
                         maxWidth: 770,
                         margin: "0 auto",
@@ -138,18 +141,18 @@ export default function AccessRoutingLayerSection(props) {
                         textAlign: "left",
                     }}
                 >
-                    <div style={{ fontSize: 38, fontWeight: 380, color: text, marginBottom: 12, lineHeight: 1.08, letterSpacing: "-0.02em", fontFamily: `${headingFont}, "Clash Grotesk", "Helvetica Neue", Inter, system-ui, sans-serif` }}>
+                    <div className="arl-info-title" style={{ fontSize: 38, fontWeight: 380, color: text, marginBottom: 12, lineHeight: 1.08, letterSpacing: "-0.02em", fontFamily: `${headingFont}, "Clash Grotesk", "Helvetica Neue", Inter, system-ui, sans-serif` }}>
                         {infoTitle}
                     </div>
-                    <p style={{ margin: 0, color: muted, fontSize: 15, lineHeight: 1.75, whiteSpace: "pre-line" }}>{infoBody}</p>
+                    <p className="arl-info-body" style={{ margin: 0, color: muted, fontSize: 15, lineHeight: 1.75, whiteSpace: "pre-line" }}>{infoBody}</p>
                 </div>
             </div>
 
-            <div style={{ marginTop: 26, textAlign: "center", padding: "0 24px" }}>
+            <div style={{ marginTop: 26, textAlign: "center", padding: "0 16px" }}>
                 <PrimaryButton
                     label={ctaText}
                     heroEffect
-                    className="h-12 rounded-xl bg-[linear-gradient(90deg,#25bfee_0%,#29e2b4_100%)] px-8 text-[16px] font-medium shadow-[0_0_24px_rgba(0,255,200,0.28)]"
+                    className="h-11 w-full max-w-[280px] rounded-xl bg-[linear-gradient(90deg,#25bfee_0%,#29e2b4_100%)] px-6 text-[15px] font-medium shadow-[0_0_24px_rgba(0,255,200,0.28)] sm:h-12 sm:w-auto sm:max-w-none sm:px-8 sm:text-[16px]"
                     style={{ fontFamily: `${uiFont}, Inter, system-ui, sans-serif` }}
                 />
             </div>
@@ -158,6 +161,40 @@ export default function AccessRoutingLayerSection(props) {
                 @media (max-width: 980px) {
                     .arl-stats {
                         grid-template-columns: 1fr !important;
+                    }
+                }
+                @media (max-width: 640px) {
+                    .arl-stat-card {
+                        padding: 16px 14px !important;
+                    }
+                    .arl-stat-icon {
+                        width: 30px !important;
+                        height: 30px !important;
+                    }
+                    .arl-stat-label {
+                        margin-top: 10px !important;
+                        font-size: 10px !important;
+                    }
+                    .arl-stat-value {
+                        font-size: 36px !important;
+                    }
+                    .arl-title {
+                        font-size: 34px !important;
+                        margin-top: 16px !important;
+                    }
+                    .arl-subtitle {
+                        font-size: 14px !important;
+                        line-height: 1.6 !important;
+                    }
+                    .arl-info-panel {
+                        padding: 18px 16px !important;
+                    }
+                    .arl-info-title {
+                        font-size: 30px !important;
+                    }
+                    .arl-info-body {
+                        font-size: 14px !important;
+                        line-height: 1.65 !important;
                     }
                 }
             `}</style>
@@ -181,6 +218,7 @@ function StatCard({ icon, label, value, panelBg, text, uiFont, tone = "cyan" }) 
 
     return (
         <div
+            className="arl-stat-card"
             style={{
                 borderRadius: 14,
                 border: `1px solid ${toneBorder}`,
@@ -191,6 +229,7 @@ function StatCard({ icon, label, value, panelBg, text, uiFont, tone = "cyan" }) 
             }}
         >
             <div
+                className="arl-stat-icon"
                 style={{
                     width: 34,
                     height: 34,
@@ -204,6 +243,7 @@ function StatCard({ icon, label, value, panelBg, text, uiFont, tone = "cyan" }) 
                 {icon}
             </div>
             <div
+                className="arl-stat-label"
                 style={{
                     marginTop: 12,
                     fontSize: 11,
@@ -216,7 +256,7 @@ function StatCard({ icon, label, value, panelBg, text, uiFont, tone = "cyan" }) 
             >
                 {label}
             </div>
-            <div style={{ marginTop: 8, fontSize: 44, lineHeight: 1.05, fontWeight: 700, color: text }}>{value}</div>
+            <div className="arl-stat-value" style={{ marginTop: 8, fontSize: 44, lineHeight: 1.05, fontWeight: 700, color: text }}>{value}</div>
         </div>
     )
 }

@@ -20,12 +20,12 @@ export function LandingOverlapFooter({ brand, tagline, copyright }: Props) {
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_78%_62%,rgba(10,70,110,0.16)_0%,rgba(10,70,110,0.06)_34%,rgba(0,0,0,0)_72%)]"
       />
 
-      <div className="relative mx-auto flex h-full max-w-[1120px] flex-col justify-end gap-5 px-4 pb-4 md:px-6 md:pb-5">
+      <div className="relative mx-auto flex h-full max-w-[1120px] flex-col justify-end gap-4 px-4 pb-4 md:gap-5 md:px-6 md:pb-5">
         <div className="flex items-start gap-3">
           <LogoMark className="mt-1 h-6 w-6 sm:h-7 sm:w-7" />
           <div>
             <h2
-              className="text-[clamp(46px,7.2vw,102px)] leading-[0.9] tracking-[-0.022em] text-white/94"
+              className="text-[clamp(36px,7.2vw,102px)] leading-[0.9] tracking-[-0.022em] text-white/94"
               style={{ fontFamily: "var(--font-clash), Inter, system-ui, sans-serif", fontWeight: 360 }}
             >
               {line1}
@@ -35,12 +35,12 @@ export function LandingOverlapFooter({ brand, tagline, copyright }: Props) {
           </div>
         </div>
 
-        <div className="flex items-center justify-between gap-4 text-white/62">
+        <div className="flex flex-col items-start justify-between gap-2 text-white/62 sm:flex-row sm:items-center sm:gap-4">
           <div className="inline-flex items-center gap-3 text-white/78">
             <span className="h-px w-12 bg-white/55" />
-            <span className="text-sm font-medium">{tagline}</span>
+            <span className="text-xs font-medium sm:text-sm">{tagline}</span>
           </div>
-          <p className="text-xs">{copyright}</p>
+          <p className="text-[11px] sm:text-xs">{copyright}</p>
         </div>
       </div>
     </section>
